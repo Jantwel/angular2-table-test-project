@@ -1,0 +1,12 @@
+<header class="header">
+    <h1>Header</h1>
+    <input type="text" placeholder="Type name" [(ngModel)] = "newTableItem.name"/>
+    <input type="text" placeholder="Surname" [(ngModel)] = "newTableItem.surname"/>
+    <input type="number" placeholder="Age" [(ngModel)] = "newTableItem.age"/>
+    <select name="gender" [(ngModel)] = "newTableItem.gender">
+        <option value="" disabled selected>Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+    <button (click)="addItem()">Add</button>
+</header>

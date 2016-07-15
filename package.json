@@ -1,0 +1,49 @@
+{
+  "name": "angular2-table-app",
+  "version": "1.0.0",
+  "main": "app/main.js",
+  "scripts": {
+    "start": "http-server -a 0.0.0.0 -p 9000",
+    "bundle": "webpack app/main.js app/dist/main.bundle.js --config webpack.config.js --watch -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jantwel/angular2-table-test-project.git"
+  },
+  "author": {
+    "name": "Vasyl Pagut",
+    "email": "pagut.vasyl@gmail.com"
+  },
+  "license": "ISC",
+  "keywords": [
+  ],
+  "description": "Angular 2 Table App",
+  "engines": {
+    "node": "6.2.1"
+  },
+  "dependencies": {
+    "@angular/common": "2.0.0-rc.4",
+    "@angular/compiler": "2.0.0-rc.4",
+    "@angular/core": "2.0.0-rc.4",
+    "@angular/http": "2.0.0-rc.4",
+    "@angular/platform-browser": "2.0.0-rc.4",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.4",
+    "@angular/router": "3.0.0-beta.2",
+    "es6-promise": "3.2.1",
+    "es6-shim": "0.35.1",
+    "http-server": "0.9.0",
+    "localStorage": "1.0.3",
+    "node-uuid": "1.4.7",
+    "reflect-metadata": "0.1.3",
+    "rxjs": "5.0.0-beta.6",
+    "zone.js": "0.6.12"
+  },
+  "devDependencies": {
+    "babel-core": "6.10.4",
+    "babel-loader": "6.2.4",
+    "babel-preset-angular2": "0.0.2",
+    "babel-preset-es2015": "6.9.0",
+    "raw-loader": "0.5.1",
+    "webpack": "1.13.1"
+  }
+}

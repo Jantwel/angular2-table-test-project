@@ -1,0 +1,21 @@
+<section class="tableapp">
+    <add-item-component></add-item-component>
+    
+    <section *ngIf="getTableItems().length">
+        <table>
+            <tr>
+                <th>Name <button (click)="sortTable(sortBy.name)">Sort</button></th>
+                <th>Surname <button (click)="sortTable(sortBy.surname)">Sort</button></th>
+                <th>Age <button (click)="sortTable(sortBy.age)">Sort</button></th>
+                <th>Gender <button (click)="sortTable(sortBy.gender)">Sort</button></th>
+            </tr>
+            <table-item 
+                *ngFor="let tableItem of getTableItems() | sort:sorting" 
+                [tableItem]="tableItem" 
+                (itemRemoved)="remove($event)" 
+                (itemModified)="update($event)">
+            </table-item>
+        </table>
+    </section>
+    
+</section>

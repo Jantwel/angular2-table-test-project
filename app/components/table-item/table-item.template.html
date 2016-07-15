@@ -1,0 +1,25 @@
+<td>
+    <input type="text" *ngIf="isEditing" [value]=" tableItem.name" [(ngModel)] = "editedItem.name">
+    <span *ngIf="!isEditing">{{  tableItem.name }} </span>
+</td>
+<td>
+    <input type="text" *ngIf="isEditing" [value]=" tableItem.surname" [(ngModel)] = "editedItem.surname">
+    <label *ngIf="!isEditing">{{  tableItem.surname }} </label>
+</td>
+<td>
+    <input type="number" *ngIf="isEditing" [value]=" tableItem.age" [(ngModel)] = "editedItem.age">
+    <label *ngIf="!isEditing">{{  tableItem.age }} </label>
+</td>
+<td>
+    <select name="gender" *ngIf="isEditing" [value]=" tableItem.gender" [(ngModel)] = "editedItem.gender">
+        <option value="" disabled selected>Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+    <label *ngIf="!isEditing">{{  tableItem.gender }} </label>
+</td>
+<button *ngIf="!isEditing" (click)="edit()">Edit</button>
+<button *ngIf="isEditing" (click)="saveChanges()">Save</button>
+<button *ngIf="isEditing" (click)="cancelEditing()">Cancel</button>
+<button (click)="remove()">Remove</button>
+    

@@ -1,3 +1,6 @@
 table-item {
     display: table-row;
 }
+.table-input {
+    width: 120px;
+}

@@ -51,6 +51,7 @@ export class TableComponent {
     return this._tableStore.tableItems;
   }
 
+  // TODO: Sorting isn't working!
   sortTable(sortBy) {
     this.sorting.value = sortBy;
     this.sorting.isAscending = !this.sorting.isAscending;

@@ -1,14 +1,26 @@
 <td>
-    <input type="text" *ngIf="isEditing" [value]=" tableItem.name" [(ngModel)] = "editedItem.name">
+    <input type="text" 
+        *ngIf="isEditing" 
+        [value]=" tableItem.name" 
+        [(ngModel)] = "editedItem.name"
+        class="table-input">
     <span *ngIf="!isEditing">{{  tableItem.name }} </span>
 </td>
 <td>
-    <input type="text" *ngIf="isEditing" [value]=" tableItem.surname" [(ngModel)] = "editedItem.surname">
-    <label *ngIf="!isEditing">{{  tableItem.surname }} </label>
+    <input type="text" 
+        *ngIf="isEditing" 
+        [value]=" tableItem.surname" 
+        [(ngModel)] = "editedItem.surname"
+        class="table-input">
+    <span *ngIf="!isEditing">{{  tableItem.surname }} </span>
 </td>
 <td>
-    <input type="number" *ngIf="isEditing" [value]=" tableItem.age" [(ngModel)] = "editedItem.age">
-    <label *ngIf="!isEditing">{{  tableItem.age }} </label>
+    <input type="number" 
+        *ngIf="isEditing" 
+        [value]=" tableItem.age" 
+        [(ngModel)] = "editedItem.age"
+        class="table-input">
+    <span *ngIf="!isEditing">{{  tableItem.age }} </span>
 </td>
 <td>
     <select name="gender" *ngIf="isEditing" [value]=" tableItem.gender" [(ngModel)] = "editedItem.gender">
@@ -16,10 +28,10 @@
         <option value="male">Male</option>
         <option value="female">Female</option>
     </select>
-    <label *ngIf="!isEditing">{{  tableItem.gender }} </label>
+    <span *ngIf="!isEditing">{{  tableItem.gender }} </span>
 </td>
-<button *ngIf="!isEditing" (click)="edit()">Edit</button>
-<button *ngIf="isEditing" (click)="saveChanges()">Save</button>
-<button *ngIf="isEditing" (click)="cancelEditing()">Cancel</button>
-<button (click)="remove()">Remove</button>
+<button *ngIf="!isEditing" (click)="edit()" class="btn btn-default">🖉 Edit</button>
+<button *ngIf="!isEditing" (click)="remove()" class="btn btn-danger">🚮 Remove</button>
+<button *ngIf="isEditing" (click)="saveChanges()" class="btn btn-success">✓ Save</button>
+<button *ngIf="isEditing" (click)="cancelEditing()" class="btn btn-warning">❌ Cancel</button>
     

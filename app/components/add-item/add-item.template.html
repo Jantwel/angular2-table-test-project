@@ -1,5 +1,5 @@
 <header class="header">
-    <h1>Header</h1>
+    <h1>Angular 2 Test App</h1>
     <input type="text" placeholder="Type name" [(ngModel)] = "newTableItem.name"/>
     <input type="text" placeholder="Surname" [(ngModel)] = "newTableItem.surname"/>
     <input type="number" placeholder="Age" [(ngModel)] = "newTableItem.age"/>
@@ -8,5 +8,5 @@
         <option value="male">Male</option>
         <option value="female">Female</option>
     </select>
-    <button (click)="addItem()">Add</button>
+    <button (click)="addItem()" class="btn btn-primary">➕ Add</button>
 </header>
